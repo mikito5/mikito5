@@ -1,3 +1,3 @@
 ## GitHub Stats
 
-![GitHub Stats](stats.png)
+![GitHub Stats](stats.svg)
