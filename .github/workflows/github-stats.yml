@@ -17,13 +17,15 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: Download stats image
+      - name: Download stats images
         run: |
           curl -L https://github-readme-stats-g1f76q19t-mikito5s-projects.vercel.app/api?username=mikito5\&show_icons=true\&theme=radical -o stats.svg
-      - name: Commit image
+          curl -L https://github-readme-stats-g1f76q19t-mikito5s-projects.vercel.app/api/top-langs/?username=mikito5\&layout=compact\&theme=radical -o top-langs.svg
+
+      - name: Commit images
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add stats.svg
+          git add stats.svg top-langs.svg
           git commit -m "Update GitHub stats" || exit 0
           git push
