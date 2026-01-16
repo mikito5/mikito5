@@ -19,7 +19,7 @@ jobs:
 
       - name: Download stats image
         run: |
-          curl -L https://github-readme-stats-g1f76q19t-mikito5s-projects.vercel.app/api?username=mikito5\&show_icons=true\&theme=radical\&format=png -o stats.png
+          curl -L https://github-readme-stats-g1f76q19t-mikito5s-projects.vercel.app/api?username=mikito5\&show_icons=true\&theme=radical -o stats.svg
 
       - name: Commit image
         run: |
